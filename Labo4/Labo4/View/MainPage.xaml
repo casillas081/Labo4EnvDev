@@ -13,9 +13,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Text="Student's list"/>
-        <ListView Grid.Row="1" 
+        <AppBarButton x:Name="EditStudent"
+                      Grid.Column="1"
+                      Icon="Edit"
+                      Command="{Binding EditStudentCommand}"></AppBarButton>
+        <TextBlock Text="Student's list" Grid.Row="1"/>
+        <ListView Grid.Row="2" 
                   Width="355" HorizontalAlignment="Left"
                   ItemsSource="{Binding Students, Mode=TwoWay}"
                   SelectedItem="{Binding SelectedStudent, Mode=TwoWay}"

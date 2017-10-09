@@ -5,9 +5,19 @@
     xmlns:local="using:Labo4"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Second}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <StackPanel Orientation="Vertical" Margin="0,51.167,0,-51">
+        <StackPanel Orientation="Horizontal" Height="Auto">
+            <TextBlock Text="Nom : " FontSize="20" Width="100"/>
+            <TextBlock Text="{Binding SelectedStudent.Name}" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="Auto">
+            <TextBlock Text="Age : " FontSize="20" Width="100"/>
+            <TextBlock Text="{Binding SelectedStudent.Age}" FontSize="20"/>
+        </StackPanel>
+        
+    </StackPanel>
 </Page>
